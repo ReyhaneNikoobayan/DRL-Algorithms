@@ -114,4 +114,88 @@ Where:
 3. Decay epsilon
 4. Store total reward per episode
 
+---
+
+# 🎮 FrozenLake DQN Project
+
+This project implements **Deep Q-Network (DQN)** to solve the **FrozenLake-v1** environment from *OpenAI Gymnasium*. The agent learns to navigate the 4x4 FrozenLake map using reinforcement learning, experience replay, and a target network to stabilize training.
+
+📄 **Source Code:**
+[FrozenLake DQN Agent](https://github.com/ReyhaneNikoobayan/DRL-Algorithms/blob/main/DQL-FrozenLake.ipynb)
+
+---
+
+## 📌 Features of This Implementation
+
+* Deep Q-Network (DQN) with:
+
+  * Single hidden-layer feedforward neural network
+  * Adam optimizer with learning rate: `0.001`
+  * Experience replay buffer (`memory_size=1000`)
+  * Target network synced every `sync_rate=10` steps
+  * Discount factor: `gamma=0.9`
+  * Epsilon-greedy policy with linear decay
+* Moving average reward plot saved automatically
+* GIF video recordings (episodes) using the learned policy
+* Organized project structure: saves results under `results/plots` and `results/videos`
+
+---
+
+## 📂 Files Generated
+
+Below are examples of the **actual results** produced by the code:
+
+### 🎯 **Training Performance (Moving Average Reward)**
+
+The plot below shows the learning curve of the FrozenLake agent. The average reward increases over episodes as the agent learns an optimal policy.
+
+**Preview:** <img width="1000" alt="learning_curve" src="<img width="1674" height="920" alt="image" src="https://github.com/user-attachments/assets/e007afe1-c079-4aa9-b319-a8b2b6c8dc8a" />
+" />
+
+### 🎞️ **Trained Agent Performance (GIF Episodes)**
+
+![frozenlake_episode_0](https://github.com/user-attachments/assets/38042cd4-444d-48dd-a78d-4676085ab6d8)
+
+---
+
+## 🧠 DQN Formula Used
+
+The Q-values are updated using the DQN method with a target network:
+
+```
+Q(s, a) = reward + γ * max(Q_target(s'))
+```
+
+Where:
+
+* **γ (gamma)** = discount factor
+* **s** = current state
+* **a** = chosen action
+* **s'** = next state
+* **Q_target** = target network prediction
+
+---
+
+## ▶️ How the Training Works
+
+1. Initialize **Policy** and **Target** networks
+2. For each episode:
+
+   * Reset the environment
+   * Choose action using epsilon-greedy policy
+   * Step through the environment → store transition in memory
+   * Update Policy network using sampled mini-batches from memory
+   * Sync Target network every `sync_rate` steps
+   * Decay epsilon gradually
+3. Record total reward per episode
+4. Save the trained model and learning curve plot
+
+---
+
+## ▶️ How Testing Works
+
+1. Load the trained Policy network
+2. Run agent for N episodes
+3. Render each step and store frames
+4. Save frames as GIFs for visualization
 
