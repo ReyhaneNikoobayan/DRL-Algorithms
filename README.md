@@ -21,8 +21,6 @@ This repository includes **tabular methods**, **value-based deep RL**, and **pol
 
 ---
 
-## 🌟 Why this project?
-
 Reinforcement Learning is best learned through **hands-on implementation**.  
 By coding each algorithm step-by-step, I aim to deeply understand how RL works behind the scenes.
 
