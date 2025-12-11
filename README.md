@@ -149,7 +149,8 @@ Below are examples of the **actual results** produced by the code:
 
 The plot below shows the learning curve of the FrozenLake agent. The average reward increases over episodes as the agent learns an optimal policy.
 
-![frozenlake_episode_0](https://github.com/user-attachments/assets/bf8e97b5-5a43-4571-be89-a0f6ae36b43d)
+<img width="1674" height="920" alt="Screenshot 2025-12-11 185216" src="https://github.com/user-attachments/assets/aee8f461-f5e8-4cc5-88fa-95b109e56f90" />
+
 
 
 ### 🎞️ **Trained Agent Performance (GIF Episodes)**
