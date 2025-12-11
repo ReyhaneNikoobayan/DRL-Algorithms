@@ -63,7 +63,7 @@ Below are examples of the **actual results** produced by the code:
 The plot below shows the learning curve of the Taxi agent. The average reward increases over episodes as the agent learns an optimal policy.
 
 **Preview:**
-<img width="3000" height="1500" alt="moving_avg_reward" src="https://github.com/user-attachments/assets/11118364-0589-4407-968c-47d0881055b4" />
+<img width="1674" height="920" alt="image" src="https://github.com/user-attachments/assets/386a9f1e-80ac-48f8-b0ed-1e043f7bbff9" />
 
 
 ### 🎞️ **Trained Agent Performance (GIF Episodes)**
