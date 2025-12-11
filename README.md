@@ -79,14 +79,6 @@ The following GIFs show the trained Taxi agent navigating the environment using 
   </tr>
 </table>
 
-
-![taxi_episode_0](https://github.com/user-attachments/assets/b592f6b6-49f2-4058-8878-f15d03bcfe1c)
-![taxi_episode_1](https://github.com/user-attachments/assets/2db8b1e1-bec8-4436-b8cd-2d4b6040b7ea)
-![taxi_episode_2](https://github.com/user-attachments/assets/86163ec1-886f-45a8-a169-de9e00c1fccc)
-![taxi_episode_3](https://github.com/user-attachments/assets/98a376cc-90fa-439b-8831-4936c05d35d3)
-![taxi_episode_4](https://github.com/user-attachments/assets/c38512ca-d42a-49b6-81cc-fa594e1eeeec)
-
-
 ## 🧠 Q‑Learning Formula Used
 
 The Q-table is updated using:
