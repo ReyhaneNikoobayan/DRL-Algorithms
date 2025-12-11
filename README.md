@@ -3,7 +3,6 @@
 # 🧠 Deep Reinforcement Learning Portfolio
 
 A curated collection of **Deep Reinforcement Learning (DRL)** algorithms implemented **from scratch** using PyTorch and Gymnasium.  
-This project serves as proof of my learning journey in reinforcement learning, showcasing clean, minimal, and fully reproducible implementations of foundational DRL algorithms.
 
 The goals of this repository are to:
 
