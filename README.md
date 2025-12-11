@@ -70,7 +70,16 @@ The plot below shows the learning curve of the Taxi agent. The average reward in
 
 The following GIFs show the trained Taxi agent navigating the environment using the learned Q‑table:
 
-![taxi_episode_0](https://github.com/user-attachments/assets/51592861-d60e-4c97-bec0-ce3d79b1a76a)   ![taxi_episode_1](https://github.com/user-attachments/assets/ed7d288a-a60b-4fae-83ad-cc547cabd385)
+<div style="display: flex; gap: 10px;">
+  <img src="![taxi_episode_0](https://github.com/user-attachments/assets/8a622882-da2d-4a10-8fc7-8ff52f7ab34d) " width="230"/>
+  <img src="![taxi_episode_1](https://github.com/user-attachments/assets/bd4e4b63-93eb-4cbc-a36a-9697c435b7e0) " width="230"/>
+  <img src="results/videos/taxi_episode_2.gif" width="230"/>
+</div>
+
+<div style="display: flex; gap: 10px; margin-top: 10px;">
+  <img src="results/videos/taxi_episode_3.gif" width="230"/>
+  <img src="results/videos/taxi_episode_4.gif" width="230"/>
+</div>
 
 
 
