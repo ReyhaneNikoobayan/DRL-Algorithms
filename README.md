@@ -113,7 +113,3 @@ Where:
 4. Store total reward per episode
 
 
-```
-pip install gymnasium numpy matplotlib imageio
-```
-
