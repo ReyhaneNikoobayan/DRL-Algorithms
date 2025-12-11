@@ -35,7 +35,7 @@ This repository is an evolving portfolio and a demonstration of my progress in D
 This project trains an agent using **Q-learning** to solve the classic **Taxi-v3** environment from *OpenAI Gymnasium*. The agent learns optimal pickup and drop-off strategies through exploration, exploitation, and iterative updates to a Q-table.
 
 📄 **Source Code:**  
-[Q-Learnin Taxi Agent](https://github.com/ReyhaneNikoobayan/DRL-Algorithms/blob/main/q_learning.ipynb)
+[Q-Learning Taxi Agent](https://github.com/ReyhaneNikoobayan/DRL-Algorithms/blob/main/q_learning.ipynb)
 
 
 ---
