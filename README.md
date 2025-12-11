@@ -68,18 +68,15 @@ The plot below shows the learning curve of the Taxi agent. The average reward in
 
 ### 🎞️ **Trained Agent Performance (GIF Episodes)**
 
-The following GIFs show the trained Taxi agent navigating the environment using the learned Q‑table:
-
 <div style="display: flex; gap: 10px;">
-  <img src="![taxi_episode_0](https://github.com/user-attachments/assets/8a622882-da2d-4a10-8fc7-8ff52f7ab34d) " width="230"/>
-  <img src="![taxi_episode_1](https://github.com/user-attachments/assets/bd4e4b63-93eb-4cbc-a36a-9697c435b7e0) " width="230"/>
-  <img src="![taxi_episode_2](https://github.com/user-attachments/assets/29846e67-b0f1-4c86-bd67-5647ced157ad)
-" width="230"/>
+  <img src="https://github.com/user-attachments/assets/8a622882-da2d-4a10-8fc7-8ff52f7ab34d" width="230"/>
+  <img src="https://github.com/user-attachments/assets/bd4e4b63-93eb-4cbc-a36a-9697c435b7e0" width="230"/>
+  <img src="https://github.com/user-attachments/assets/29846e67-b0f1-4c86-bd67-5647ced157ad" width="230"/>
 </div>
 
 <div style="display: flex; gap: 10px; margin-top: 10px;">
-  <img src="![taxi_episode_3](https://github.com/user-attachments/assets/e5655478-336f-4fa2-96de-13128424a440) " width="230"/>
-  <img src="![taxi_episode_4](https://github.com/user-attachments/assets/a4b50f1c-cedf-4be5-b662-7b9aa235b12a) " width="230"/>
+  <img src="https://github.com/user-attachments/assets/e5655478-336f-4fa2-96de-13128424a440" width="230"/>
+  <img src="https://github.com/user-attachments/assets/a4b50f1c-cedf-4be5-b662-7b9aa235b12a" width="230"/>
 </div>
 
 
