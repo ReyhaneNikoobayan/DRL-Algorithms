@@ -66,38 +66,12 @@ The plot below shows the learning curve of the Taxi agent. The average reward in
 
 The following GIFs show the trained Taxi agent navigating the environment using the learned Q‑table:
 
-* `results/videos/taxi_episode_0.gif`
+![taxi_episode_0](https://github.com/user-attachments/assets/b592f6b6-49f2-4058-8878-f15d03bcfe1c)
+![taxi_episode_1](https://github.com/user-attachments/assets/2db8b1e1-bec8-4436-b8cd-2d4b6040b7ea)
+![taxi_episode_2](https://github.com/user-attachments/assets/86163ec1-886f-45a8-a169-de9e00c1fccc)
+![taxi_episode_3](https://github.com/user-attachments/assets/98a376cc-90fa-439b-8831-4936c05d35d3)
+![taxi_episode_4](https://github.com/user-attachments/assets/c38512ca-d42a-49b6-81cc-fa594e1eeeec)
 
-* ![taxi_episode_0](https://github.com/user-attachments/assets/ab2a3ba1-75d0-42f2-ab33-b9c6ac0d2222)
-
-
-
-
-### **1. 📊 Moving Average Reward Plot**
-
-Saved here:
-
-```
-results/plots/moving_avg_reward.png
-```
-
-This plot shows the agent’s performance improvement over time using a 100‑episode moving window.
-
-### **2. 🎥 Episode GIFs**
-
-Saved here:
-
-```
-results/videos/taxi_episode_0.gif
-results/videos/taxi_episode_1.gif
-results/videos/taxi_episode_2.gif
-results/videos/taxi_episode_3.gif
-results/videos/taxi_episode_4.gif
-```
-
-Each GIF visualizes the trained agent navigating the Taxi-v3 environment.
-
----
 
 ## 🧠 Q‑Learning Formula Used
 
@@ -132,60 +106,8 @@ Where:
 3. Decay epsilon
 4. Store total reward per episode
 
----
-
-## 📈 Visualization
-
-A plot is generated to help understand the agent's learning trend. It shows:
-
-* Increasing reward over time (as exploration decreases)
-* Stabilization once optimal policy is learned
-
----
-
-## 🎞️ Policy Demonstration
-
-After training, the agent runs 5 evaluation episodes in greedy mode (`argmax(Q[state])`).
-GIFs are rendered using RGB frames from the environment.
-
----
-
-## ✔️ Requirements
-
-Make sure you have:
-
-* Python 3.8+
-* `gymnasium`
-* `numpy`
-* `matplotlib`
-* `imageio`
-
-Install with:
 
 ```
 pip install gymnasium numpy matplotlib imageio
 ```
-
----
-
-## 🚀 Running the Code
-
-Simply run the script:
-
-```
-python your_script.py
-```
-
-All results will be automatically saved.
-
----
-
-## 🏁 Final Notes
-
-This implementation is a clean, reproducible example of reinforcement learning using Q-learning. It helps visualize both:
-
-* Training progression
-* Behavior of the learned agent
-
-Feel free to modify hyperparameters and explore improved methods like SARSA or deep Q-networks (DQN)! 🚀
 
