@@ -247,7 +247,8 @@ This plot illustrates how the agent improves over time:
 
 Below are example GIFs produced during evaluation:
 
-![mountain_car_episode_6](https://github.com/user-attachments/assets/112ae9ab-0add-4fd5-93df-e877ae878e1a)
+![mountain_car_episode_7](https://github.com/user-attachments/assets/d33f90d2-e794-4875-b85d-15791d2aa5d6)
+
 
 
 
