@@ -303,7 +303,7 @@ The implementation includes:
 
 ## 📄 Source Code
 
-👉 [A3C-CartPole Implementation](https://github.com/your-repository-link)
+👉 [A3C-CartPole Implementation](https://github.com/ReyhaneNikoobayan/DRL-Algorithms/blob/main/A3C-cartpole.py)
 
 ---
 
@@ -326,7 +326,7 @@ The implementation includes:
   - `gamma = 0.9`
   - `lr = 3e-4`
   - `max_steps = 30` per rollout
-  - Entropy coefficient = `0.08`
+  - Entropy coefficient = `0.01`
 
 ### 🎥 Testing & Visualization
 - Greedy policy testing after training
