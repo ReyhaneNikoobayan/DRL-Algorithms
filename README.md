@@ -242,7 +242,7 @@ This plot illustrates how the agent improves over time:
 
 ---
 
-### 🎞️ Trained Agent GIFs
+### 🎞️ Trained Agent GIF
 
 Below are example GIFs produced during evaluation:
 
@@ -475,7 +475,7 @@ This shows the agent’s improvement and stabilization over time.
 
 ---
 
-## 🎞️ Evaluation Videos (GIF)
+## 🎞️ Evaluation Video (GIF)
 
 Below are example GIFs produced during evaluation:
 
