@@ -402,7 +402,7 @@ The policy network outputs action probabilities and is optimized using the log-p
 
 ## 📄 Source Code
 
-👉 [VPG-CartPole Implementation](https://github.com/ReyhaneNikoobayan/DRL-Algorithms/blob/main/A3C-cartpole.py)
+👉 [VPG-CartPole Implementation](https://github.com/ReyhaneNikoobayan/DRL-Algorithms/blob/main/VPG-cartpole.ipynb)
 
 ---
 
