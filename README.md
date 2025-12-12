@@ -336,8 +336,6 @@ The implementation includes:
 ---
 
 
----
-
 ## ▶️ How Training Works
 
 1. Create global shared network  
@@ -367,7 +365,6 @@ The implementation includes:
 - The reward for each episode is printed  
 
 Example output:
-
 
 ---
 
