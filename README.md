@@ -466,7 +466,7 @@ The script generates:
 
 ### 💡 Moving Average Reward (window = 100)
 
-A plot is saved as:
+This plot illustrates how the agent improves over time:
 
 <img width="1200" height="600" alt="moving_average_rewards" src="https://github.com/user-attachments/assets/819a5d5d-ebc0-4224-80ad-214998533c02" />
 
@@ -477,7 +477,7 @@ This shows the agent’s improvement and stabilization over time.
 
 ## 🎞️ Evaluation Videos (GIF)
 
-After training, 5 test episodes are rendered and saved in:
+Below are example GIFs produced during evaluation:
 
 ![cartpole_episode_2](https://github.com/user-attachments/assets/9401ed3f-882c-476d-a4fb-4221466c75b8)
 
