@@ -395,7 +395,7 @@ L = L_actor + L_critic + L_entropy
 
 # 🚀 CartPole-v1 Policy Gradient (REINFORCE) with PyTorch
 
-This repository implements the **REINFORCE / Vanilla Policy Gradient** algorithm to solve **CartPole-v1** from OpenAI Gymnasium.  
+This code implements the **REINFORCE / Vanilla Policy Gradient** algorithm to solve **CartPole-v1** from OpenAI Gymnasium.  
 The policy network outputs action probabilities and is optimized using the log-probability trick with discounted returns.
 
 ---
