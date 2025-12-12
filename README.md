@@ -285,7 +285,7 @@ Loss = MSE( Q_policy(s), Q_target )
 
 ---
 
-# 🏋️ A3C-Style Multiprocessing CartPole Agent (PyTorch)
+# 🏋️ A3C Multiprocessing CartPole Agent (PyTorch)
 
 This project implements an **A3C-style reinforcement learning agent** for the **CartPole-v1** environment using **PyTorch multiprocessing**.  
 Multiple workers run in parallel, each interacting with its own environment, updating a shared global network.
@@ -372,6 +372,7 @@ Example output:
 
 After training, the agent should balance the pole for the full 500 steps:
 
+![cartpole_episode_4](https://github.com/user-attachments/assets/810b4b85-b715-4160-91a4-492cdbe29601)
 
 
 ## 🧠 Algorithm Summary
