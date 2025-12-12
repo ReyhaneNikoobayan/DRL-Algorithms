@@ -8,8 +8,9 @@ import time
 import gymnasium as gym
 import torch.nn.functional as F
 import torch.distributions as dist
-
+import imageio
 import torch.multiprocessing as mp
+import os
 
 class network(nn.Module):
         def __init__(self, n_state, n_hidden, n_action):
@@ -111,7 +112,7 @@ def agent(global_net, number_episode, gamma, max_steps, n_hidden, render, optimi
                 critic_loss = F.mse_loss(values, returns)
 
                 entropies = torch.stack(entropies)
-                entropy_loss = -0.08 * entropies.sum()  # encourage exploration
+                entropy_loss = -0.01 * entropies.sum()  # encourage exploration
 
 
                 loss = actor_loss + critic_loss + entropy_loss
@@ -144,7 +145,8 @@ def agent(global_net, number_episode, gamma, max_steps, n_hidden, render, optimi
 
 
 def test_agent(global_net, n_episodes=5, render=True):
-    env = gym.make("CartPole-v1", render_mode="human" if render else None)
+    env = gym.make("CartPole-v1", render_mode="rgb_array" if render else None)
+    os.makedirs("results/videos", exist_ok=True)
     num_state = env.observation_space.shape[0]
 
     for ep in range(1, n_episodes + 1):
@@ -152,9 +154,14 @@ def test_agent(global_net, n_episodes=5, render=True):
         terminated = False
         truncated = False
         total_reward = 0
+        frames = []
 
         while not (terminated or truncated):
+
+            frame = env.render()
+            frames.append(np.array(frame, dtype=np.uint8))
             state_tensor = torch.tensor(state, dtype=torch.float32)
+
             with torch.no_grad():
                 action_prob, _ = global_net(state_tensor)
             
@@ -163,6 +170,14 @@ def test_agent(global_net, n_episodes=5, render=True):
 
             state, reward, terminated, truncated, info = env.step(action)
             total_reward += reward
+
+            if terminated or truncated:
+                    frames.append(env.render())
+
+        # Save GIF
+        gif_path = f"results/videos/cartpole_episode_{ep}.gif"
+        imageio.mimsave(gif_path, frames, fps=40)
+        print("Saved GIF:", gif_path)
 
         print(f"[TEST] Episode {ep} Reward: {total_reward}")
     env.close()
@@ -187,7 +202,7 @@ if __name__ == "__main__":
     num_workers = 3
 
     for rank in range(num_workers):
-        p = mp.Process( target=agent,args=(global_net,2000,0.9,30,n_hidden,False, optimizer,rank))
+        p = mp.Process( target=agent,args=(global_net,3000,0.9,30,n_hidden,False, optimizer,rank))
         p.start()
         processes.append(p)
 
@@ -198,7 +213,6 @@ if __name__ == "__main__":
     test_agent(global_net, n_episodes=5, render=True)    
 
           
-
 
 
 
