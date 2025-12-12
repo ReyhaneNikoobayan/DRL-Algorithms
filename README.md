@@ -391,6 +391,87 @@ L_entropy = -0.08 * entropy
 
 L = L_actor + L_critic + L_entropy
 
+---
+
+# REINFORCE Policy Gradient on CartPole-v1
+
+This code implements the **REINFORCE Policy Gradient algorithm** using PyTorch to solve the classic **CartPole-v1** reinforcement learning task. The agent learns a stochastic policy that maps states to action probabilities and is trained using Monte-Carlo policy gradients.
+
+---
+
+## 🧠 Algorithm Explanation (REINFORCE)
+
+The REINFORCE algorithm is one of the simplest policy-gradient methods.  
+The key idea is:
+
+**1. Run a full episode using the current policy**  
+The policy network outputs a probability distribution over actions. Actions are sampled from this distribution.
+
+**2. Record:**
+- log-probabilities of the taken actions  
+- rewards obtained at each step  
+
+**3. Compute returns (discounted cumulative reward)**  
+For each time step:
+
+\[
+G_t = r_t + \gamma r_{t+1} + \gamma^2 r_{t+2} + \dots
+\]
+
+This represents how good each action ultimately was.
+
+**4. Update the policy to increase log-probabilities of actions that led to high returns**
+
+\[
+\nabla J(\theta) \approx G_t \, \nabla_{\theta} \log \pi_{\theta}(a_t | s_t)
+\]
+
+The loss function used:
+
+\[
+L = - \sum_t G_t \, \log \pi_{\theta}(a_t | s_t)
+\]
+
+This implementation performs **batch updates** every `count_num` episodes (e.g., every 20 episodes) to stabilize training.
+
+---
+
+## 🛠 Implementation Summary
+
+### Policy Network
+A simple 3-layer feedforward neural network:
+
+- Input: CartPole state (4 values)
+- Two hidden layers (ReLU activations)
+- Output: action probabilities (Softmax)
+
+### Training Loop
+- Environment: `CartPole-v1`  
+- The agent plays `number_episode` episodes (default: 5000)
+- After each episode:
+  - rewards are stored  
+  - log-probabilities are stored  
+  - discounted returns are computed  
+- After `count_num` episodes:
+  - all log-probabilities and returns are batched  
+  - a gradient update is performed using Adam optimizer  
+
+### Testing
+A greedy version of the policy is used for evaluation:
+- Takes the action with highest probability (`argmax`)  
+- Records all frames  
+- Saves them as GIFs in `results/videos/`  
+
+---
+
+## 📊 Results
+
+### **1. Training Performance**
+
+During training, the script generates:
+
+
+
 ## ⭐ If you use this project…
 
 Please consider starring the repository ⭐  
