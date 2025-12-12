@@ -392,91 +392,86 @@ L_entropy = -0.08 * entropy
 L = L_actor + L_critic + L_entropy
 
 ---
+# 🚀 CartPole-v1 — Policy Gradient (REINFORCE) with PyTorch
 
-# REINFORCE Policy Gradient on CartPole-v1
-
-This code implements the **REINFORCE Policy Gradient algorithm** using PyTorch to solve the classic **CartPole-v1** reinforcement learning task. The agent learns a stochastic policy that maps states to action probabilities and is trained using Monte-Carlo policy gradients.
-
----
-
-## 🧠 Algorithm Explanation (REINFORCE)
-
-The REINFORCE algorithm is one of the simplest policy-gradient methods.  
-The key idea is:
-
-**1. Run a full episode using the current policy**  
-The policy network outputs a probability distribution over actions. Actions are sampled from this distribution.
-
-**2. Record:**
-- log-probabilities of the taken actions  
-- rewards obtained at each step  
-
-**3. Compute returns (discounted cumulative reward)**  
-For each time step:
-
-\[
-G_t = r_t + \gamma r_{t+1} + \gamma^2 r_{t+2} + \dots
-\]
-
-This represents how good each action ultimately was.
-
-**4. Update the policy to increase log-probabilities of actions that led to high returns**
-
-\[
-\nabla J(\theta) \approx G_t \, \nabla_{\theta} \log \pi_{\theta}(a_t | s_t)
-\]
-
-The loss function used:
-
-\[
-L = - \sum_t G_t \, \log \pi_{\theta}(a_t | s_t)
-\]
-
-This implementation performs **batch updates** every `count_num` episodes (e.g., every 20 episodes) to stabilize training.
+This repository implements the **REINFORCE / Vanilla Policy Gradient** algorithm to solve **CartPole-v1** from OpenAI Gymnasium.  
+The policy network outputs action probabilities and is optimized using the log-probability trick with discounted returns.
 
 ---
 
-## 🛠 Implementation Summary
+## 📄 Project Files
 
-### Policy Network
-A simple 3-layer feedforward neural network:
-
-- Input: CartPole state (4 values)
-- Two hidden layers (ReLU activations)
-- Output: action probabilities (Softmax)
-
-### Training Loop
-- Environment: `CartPole-v1`  
-- The agent plays `number_episode` episodes (default: 5000)
-- After each episode:
-  - rewards are stored  
-  - log-probabilities are stored  
-  - discounted returns are computed  
-- After `count_num` episodes:
-  - all log-probabilities and returns are batched  
-  - a gradient update is performed using Adam optimizer  
-
-### Testing
-A greedy version of the policy is used for evaluation:
-- Takes the action with highest probability (`argmax`)  
-- Records all frames  
-- Saves them as GIFs in `results/videos/`  
+- `main.py` — Full training + testing implementation  
+- `moving_average_rewards.png` — Plot of moving average reward after training  
+- `results/videos/*.gif` — GIF recordings of the trained agent  
 
 ---
 
-## 📊 Results
+## 🧠 Algorithm: REINFORCE
 
-### **1. Training Performance**
+The policy is updated using the classic Monte-Carlo Policy Gradient:
 
-During training, the script generates:
+loss = − Σ [ log π(aₜ | sₜ) * Gₜ ]
+
+Where:
+
+- `Gₜ` = discounted future return  
+- `log π(aₜ | sₜ)` = log-probability of chosen action  
+- The negative sign ensures **gradient ascent** on expected reward  
+
+---
+
+## 🏗 Policy Network Architecture
+
+state (4-dim)
+→ Linear(4 → 32) → ReLU
+→ Linear(32 → 32) → ReLU
+→ Linear(32 → 2) → Softmax
 
 
+Output is a probability distribution over two actions:
 
-## ⭐ If you use this project…
+- `0` = move left  
+- `1` = move right  
 
-Please consider starring the repository ⭐  
-It helps others discover this project.
+---
 
+## ▶️ Training Process Overview
+
+1. Run episodes and record:
+   - rewards
+   - log-probabilities of actions taken  
+2. Compute discounted returns:
+Gₜ = rₜ + γ Gₜ₊₁
+
+3. After every `count_num = 20` episodes:
+- Concatenate all log-probs and returns  
+- Compute policy loss  
+- Backpropagate and update the network  
+4. Save the moving average reward plot  
+5. Evaluate the policy and save 5 GIF videos  
+
+---
+
+
+---
+
+## 📈 Training Performance
+
+The script generates:
+
+### 💡 Moving Average Reward (window = 100)
+
+A plot is saved as:
+
+
+This shows the agent’s improvement and stabilization over time.
+
+---
+
+## 🎞️ Evaluation Videos (GIF)
+
+After training, 5 test episodes are rendered and saved in:
 
 
 
