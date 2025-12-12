@@ -198,6 +198,7 @@ Where:
 3. Render each step and store frames
 4. Save frames as GIFs for visualization
 
+---
 
 # 🚗⛰️ MountainCar-v0 Deep Q-Learning Project
 
@@ -283,7 +284,6 @@ Loss = MSE( Q_policy(s), Q_target )
    * Reward plot → `moving_average_rewards.png`
    * GIFs → `results/videos/`
 
----
 ---
 
 # 🏋️ A3C Multiprocessing CartPole Agent (PyTorch)
