@@ -392,6 +392,7 @@ L_entropy = -0.08 * entropy
 L = L_actor + L_critic + L_entropy
 
 ---
+
 # 🚀 CartPole-v1 Policy Gradient (REINFORCE) with PyTorch
 
 This repository implements the **REINFORCE / Vanilla Policy Gradient** algorithm to solve **CartPole-v1** from OpenAI Gymnasium.  
@@ -449,6 +450,13 @@ Gₜ = rₜ + γ Gₜ₊₁
 4. Save the moving average reward plot  
 5. Evaluate the policy and save 5 GIF videos  
 
+
+---
+
+
+## 📊 **Test Performance Overview**
+
+After training, the agent is evaluated for **5 episodes** using a greedy policy (`argmax`).  
 
 ---
 
