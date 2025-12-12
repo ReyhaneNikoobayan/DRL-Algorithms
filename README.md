@@ -285,6 +285,113 @@ Loss = MSE( Q_policy(s), Q_target )
 
 ---
 
+# 🏋️ A3C-Style Multiprocessing CartPole Agent (PyTorch)
+
+This project implements an **A3C-style reinforcement learning agent** for the **CartPole-v1** environment using **PyTorch multiprocessing**.  
+Multiple workers run in parallel, each interacting with its own environment, updating a shared global network.
+
+The implementation includes:
+
+- Shared global Actor–Critic network  
+- Multiple workers using `torch.multiprocessing`  
+- Entropy regularization for exploration  
+- Advantage estimation  
+- GIF recording of test episodes  
+- Clean code structure without external frameworks
+
+---
+
+## 📄 Source Code
+
+👉 [A3C-CartPole Implementation](https://github.com/your-repository-link)
+
+---
+
+## 🔧 Features
+
+### 🧠 Neural Network Architecture
+- Shared **Actor–Critic network** with:
+  - 2 hidden layers (`n_hidden = 32`)
+  - Softmax policy head (action probabilities)
+  - Value head (state value estimate)
+
+### ⚙️ Training Setup
+- Uses **three parallel workers**
+- Each worker:
+  - Interacts with its own environment
+  - Computes returns and advantages
+  - Pushes gradients to the global network
+  - Receives updated parameters
+- Hyperparameters:
+  - `gamma = 0.9`
+  - `lr = 3e-4`
+  - `max_steps = 30` per rollout
+  - Entropy coefficient = `0.08`
+
+### 🎥 Testing & Visualization
+- Greedy policy testing after training
+- Saves GIF videos of episodes:
+  - `results/videos/cartpole_episode_x.gif`
+
+---
+
+
+---
+
+## ▶️ How Training Works
+
+1. Create global shared network  
+2. Spawn N workers (processes)  
+3. Each worker:
+   - Runs episodes independently  
+   - Collects:
+     - log probabilities  
+     - rewards  
+     - state values  
+     - entropy  
+   - Computes:
+     - Returns  
+     - Advantages  
+     - Actor + Critic + Entropy loss  
+   - Sends gradients → updates global net  
+   - Syncs with global net  
+4. After all workers finish, run test episodes
+
+---
+
+## ▶️ How Testing Works
+
+- The trained global network is evaluated for `n_episodes`  
+- The agent selects actions greedily  
+- Each frame is captured and saved as a GIF  
+- The reward for each episode is printed  
+
+Example output:
+
+
+---
+
+## 📷 Example Test Result (GIF)
+
+After training, the agent should balance the pole for the full 500 steps:
+
+
+
+## 🧠 Algorithm Summary
+
+### Actor Loss  
+L_actor = -log_prob(a) * advantage
+
+### Critic Loss  
+L_critic = (returns - values)^2
+
+### Entropy Regularization  
+L_entropy = -0.08 * entropy
+
+### Total Loss  
+
+L = L_actor + L_critic + L_entropy
+
 ## ⭐ If you use this project…
 
 Please consider starring the repository ⭐  
