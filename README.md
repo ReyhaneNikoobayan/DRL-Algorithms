@@ -399,11 +399,9 @@ The policy network outputs action probabilities and is optimized using the log-p
 
 ---
 
-## 📄 Project Files
+## 📄 Source Code
 
-- `main.py` — Full training + testing implementation  
-- `moving_average_rewards.png` — Plot of moving average reward after training  
-- `results/videos/*.gif` — GIF recordings of the trained agent  
+👉 [VPG-CartPole Implementation](https://github.com/ReyhaneNikoobayan/DRL-Algorithms/blob/main/A3C-cartpole.py)
 
 ---
 
@@ -450,8 +448,6 @@ Gₜ = rₜ + γ Gₜ₊₁
 - Backpropagate and update the network  
 4. Save the moving average reward plot  
 5. Evaluate the policy and save 5 GIF videos  
-
----
 
 
 ---
