@@ -481,6 +481,11 @@ Below are example GIFs produced during evaluation:
 
 ![cartpole_episode_2](https://github.com/user-attachments/assets/9401ed3f-882c-476d-a4fb-4221466c75b8)
 
+## Generalized Advantage Estimation (GAE)
+
+This repository includes an implementation of **Generalized Advantage Estimation (GAE)**, a widely used technique in modern policy gradient and actor-critic reinforcement learning algorithms. GAE improves the estimation of the advantage function by computing a weighted sum of temporal-difference (TD) residuals, controlled by the discount factor `γ` and the smoothing parameter `λ`. By adjusting `λ`, GAE provides a smooth trade-off between low-variance, high-bias one-step TD methods and high-variance, low-bias Monte Carlo returns. This results in more stable policy updates, improved sample efficiency, and faster convergence when training reinforcement learning agents.
+
+
 
 
 
