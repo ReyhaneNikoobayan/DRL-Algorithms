@@ -483,7 +483,12 @@ Below are example GIFs produced during evaluation:
 
 ## Generalized Advantage Estimation (GAE)
 
-This repository includes an implementation of **Generalized Advantage Estimation (GAE)**, a widely used technique in modern policy gradient and actor-critic reinforcement learning algorithms. GAE improves the estimation of the advantage function by computing a weighted sum of temporal-difference (TD) residuals, controlled by the discount factor `γ` and the smoothing parameter `λ`. By adjusting `λ`, GAE provides a smooth trade-off between low-variance, high-bias one-step TD methods and high-variance, low-bias Monte Carlo returns. This results in more stable policy updates, improved sample efficiency, and faster convergence when training reinforcement learning agents.
+Generalized Advantage Estimation (GAE) is a technique used in actor-critic reinforcement learning algorithms to reduce the high variance commonly found in basic policy gradient methods such as REINFORCE. In the Advantage Actor-Critic (A2C) framework, policy updates rely on the advantage function, defined as the difference between the action-value function and the state-value function. The challenge lies in estimating this advantage accurately while maintaining a balance between bias and variance.
+
+GAE addresses this challenge by computing the advantage as an exponentially weighted sum of temporal-difference (TD) errors, controlled by the discount factor `γ` and a smoothing parameter `λ`. When `λ = 0`, GAE reduces to the one-step TD advantage, which has low variance but may be biased. When `λ = 1`, it becomes equivalent to the Monte Carlo advantage estimate, which is unbiased but has high variance. Intermediate values of `λ` interpolate between these two extremes, allowing practitioners to tune the bias-variance trade-off.
+
+In practice, GAE is efficiently computed using a backward recursive formulation over a trajectory, making it suitable for large-scale training. It is widely used in modern policy optimization algorithms such as PPO and TRPO, where it significantly improves training stability, sample efficiency, and convergence speed.
+
 
 
 
