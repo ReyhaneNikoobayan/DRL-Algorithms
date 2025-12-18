@@ -499,6 +499,11 @@ The agent is trained on the **LunarLander-v3** environment with a discrete actio
 
 ---
 
+📄 **Source Code:**  
+[GAE LunarLander](https://github.com/ReyhaneNikoobayan/DRL-Algorithms/blob/main/GAE.ipynb)
+
+---
+
 ## 📌 Project Overview
 
 - **Algorithm:** Actor–Critic (A2C-style) with GAE  
@@ -682,8 +687,7 @@ After training, the policy is evaluated in render mode:
 
 - Multiple test episodes are executed
 - Each episode is saved as a **GIF**
-- Videos are stored in:
-
+- Below are example GIFs produced during evaluation and are all successful landings.
 
 
 <p align="center">
@@ -703,6 +707,9 @@ After training, the policy is evaluated in render mode:
 
 ### 📊 Training Results and Evaluation
 
+## "Reached" indicates the agent successfully terminated the episode by landing.
+
+# Last 100 episodes:
 
 Episode 5400 | Steps: 482 | Failure ❌ | Total rewards: 30.60 | Current reward: -100.00 | Status: Crashed
 
