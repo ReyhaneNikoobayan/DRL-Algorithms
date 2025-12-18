@@ -586,9 +586,9 @@ a low-variance and low-bias advantage estimate.
 
 Hyperparameters
 
-γ (gamma)   = 0.99   # discount factor
+γ (gamma)   = 0.99    discount factor
 
-λ (lambda)  = 0.96   # GAE smoothing parameter
+λ (lambda)  = 0.96    GAE smoothing parameter
 
 --------------------------------------------------
 
@@ -684,7 +684,6 @@ After training, the policy is evaluated in render mode:
 - Each episode is saved as a **GIF**
 - Videos are stored in:
 
-```text
 ![LunarLander_2](https://github.com/user-attachments/assets/0b30b035-36e7-42fa-ab21-bcc7da686f7f)
 
 
