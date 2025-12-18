@@ -582,6 +582,8 @@ Advantage Function
 
 A_t = sum_{l=0 to ∞} (γ * λ)^l * delta_{t+l}
 
+At​=l=0∑∞​(γλ)lδt+l​
+
 This formulation combines multiple-step TD errors to obtain
 a low-variance and low-bias advantage estimate.
 
