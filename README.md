@@ -708,8 +708,9 @@ After training, the policy is evaluated in render mode:
 ### 📊 Training Results and Evaluation
 
 #### "Reached" indicates the agent successfully terminated the episode by landing.
+#### "Crashed" indicates the agent terminated the episode due to an unsuccessful landing.
 
-#### Last 100 episodes:
+#### Last 100 episodes of Training:
 
 Episode 5400 | Steps: 482 | Failure ❌ | Total rewards: 30.60 | Current reward: -100.00 | Status: Crashed
 
