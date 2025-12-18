@@ -684,18 +684,17 @@ After training, the policy is evaluated in render mode:
 - Each episode is saved as a **GIF**
 - Videos are stored in:
 
-![LunarLander_0](https://github.com/user-attachments/assets/7ec8be61-2d8b-4515-b49d-2d35126b0b8d)
 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/230eb936-e7d6-4076-b768-d3739bf65089" width="200">
   <img src="https://github.com/user-attachments/assets/1922717e-2c1e-4ca9-8429-38c46491c4c7" width="200">
-  <img src="gif3.gif" width="200">
+  <img src="https://github.com/user-attachments/assets/62938a3c-b89d-48e0-b1b1-a2cb2bb04f0f" width="200">
 </p>
 
 <p align="center">
-  <img src="gif4.gif" width="200">
-  <img src="gif5.gif" width="200">
+  <img src="https://github.com/user-attachments/assets/8a87fb8c-d7d8-4ada-a96f-9e513bca9eb0" width="200">
+  <img src="https://github.com/user-attachments/assets/cb153e42-e46c-4b85-bf17-f0d24ebe387f" width="200">
 </p>
 
 
@@ -704,81 +703,147 @@ After training, the policy is evaluated in render mode:
 
 ### 📊 Training Results and Evaluation
 
-Episode 5400 | Avg reward (last 100): 130.39
+
 Episode 5400 | Steps: 482 | Failure ❌ | Total rewards: 30.60 | Current reward: -100.00 | Status: Crashed
+
 Episode 5404 | Steps: 444 | Failure ❌ | Total rewards: 34.17 | Current reward: -100.00 | Status: Crashed
+
 Episode 5407 | Steps: 471 | Success ✅ | Total rewards: 124.78 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5408 | Steps: 561 | Success ✅ | Total rewards: 41.93 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5411 | Steps: 549 | Failure ❌ | Total rewards: 35.64 | Current reward: -100.00 | Status: Crashed
+
 Episode 5412 | Steps: 520 | Success ✅ | Total rewards: 60.48 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5414 | Steps: 501 | Success ✅ | Total rewards: 77.84 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5417 | Steps: 607 | Success ✅ | Total rewards: 69.63 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5419 | Steps: 516 | Success ✅ | Total rewards: 98.60 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5420 | Steps: 522 | Success ✅ | Total rewards: 88.31 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5427 | Steps: 530 | Success ✅ | Total rewards: 102.97 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5430 | Steps: 504 | Success ✅ | Total rewards: 121.89 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5434 | Steps: 560 | Failure ❌ | Total rewards: 35.14 | Current reward: -100.00 | Status: Crashed
+
 Episode 5441 | Steps: 930 | Success ✅ | Total rewards: 130.30 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5443 | Steps: 754 | Success ✅ | Total rewards: 119.95 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5444 | Steps: 539 | Success ✅ | Total rewards: 67.51 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5445 | Steps: 435 | Failure ❌ | Total rewards: 95.84 | Current reward: -100.00 | Status: Crashed
+
 Episode 5446 | Steps: 450 | Success ✅ | Total rewards: 117.70 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5447 | Steps: 825 | Success ✅ | Total rewards: 137.54 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5448 | Steps: 457 | Success ✅ | Total rewards: 112.58 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5449 | Steps: 543 | Success ✅ | Total rewards: 93.96 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5450 | Steps: 465 | Failure ❌ | Total rewards: 61.18 | Current reward: -100.00 | Status: Crashed
+
 Episode 5452 | Steps: 419 | Success ✅ | Total rewards: 138.86 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5453 | Steps: 490 | Success ✅ | Total rewards: 86.50 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5454 | Steps: 552 | Success ✅ | Total rewards: 143.91 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5455 | Steps: 406 | Success ✅ | Total rewards: 132.91 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5456 | Steps: 428 | Failure ❌ | Total rewards: 68.74 | Current reward: -100.00 | Status: Crashed
+
 Episode 5459 | Steps: 385 | Success ✅ | Total rewards: 133.98 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5460 | Steps: 379 | Success ✅ | Total rewards: 139.78 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5461 | Steps: 426 | Success ✅ | Total rewards: 140.84 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5462 | Steps: 431 | Success ✅ | Total rewards: 128.58 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5463 | Steps: 380 | Success ✅ | Total rewards: 144.25 | Current reward: 100.00 | Status: Reached the goal
-Episode 5464 | Steps: 408 | Success ✅ | Total rewards: 145.76 | Current reward: 100.00 | Status: Reached the goal
+
+Episode 5464 | Steps: 408 | Success ✅ | Total rewards: 145.76 | Current reward: 100.00 | Status: Reached the goal 
+
 Episode 5465 | Steps: 439 | Success ✅ | Total rewards: 154.40 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5466 | Steps: 293 | Failure ❌ | Total rewards: 63.44 | Current reward: -100.00 | Status: Crashed
+
 Episode 5467 | Steps: 419 | Success ✅ | Total rewards: 84.19 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5469 | Steps: 437 | Success ✅ | Total rewards: 128.13 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5470 | Steps: 442 | Success ✅ | Total rewards: 155.21 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5472 | Steps: 456 | Success ✅ | Total rewards: 133.68 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5473 | Steps: 412 | Success ✅ | Total rewards: 118.87 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5474 | Steps: 438 | Success ✅ | Total rewards: 119.51 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5475 | Steps: 388 | Success ✅ | Total rewards: 127.20 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5476 | Steps: 453 | Success ✅ | Total rewards: 126.55 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5478 | Steps: 407 | Success ✅ | Total rewards: 154.61 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5479 | Steps: 463 | Success ✅ | Total rewards: 137.05 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5481 | Steps: 338 | Failure ❌ | Total rewards: 118.25 | Current reward: -100.00 | Status: Crashed
+
 Episode 5483 | Steps: 359 | Success ✅ | Total rewards: 137.98 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5484 | Steps: 407 | Success ✅ | Total rewards: 129.14 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5485 | Steps: 401 | Success ✅ | Total rewards: 141.95 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5486 | Steps: 681 | Success ✅ | Total rewards: 144.09 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5487 | Steps: 418 | Success ✅ | Total rewards: 133.70 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5489 | Steps: 384 | Success ✅ | Total rewards: 121.64 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5490 | Steps: 579 | Success ✅ | Total rewards: 109.30 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5491 | Steps: 394 | Success ✅ | Total rewards: 138.36 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5492 | Steps: 385 | Success ✅ | Total rewards: 165.90 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5493 | Steps: 499 | Success ✅ | Total rewards: 34.39 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5494 | Steps: 362 | Success ✅ | Total rewards: 162.52 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5495 | Steps: 274 | Failure ❌ | Total rewards: 78.18 | Current reward: -100.00 | Status: Crashed
+
 Episode 5497 | Steps: 401 | Success ✅ | Total rewards: 124.08 | Current reward: 100.00 | Status: Reached the goal
+
 Episode 5498 | Steps: 386 | Success ✅ | Total rewards: 117.66 | Current reward: 100.00 | Status: Reached the goal
-Episode 5500 | Avg reward (last 100): 152.24
+
 Episode 5499 | Steps: 399 | Success ✅ | Total rewards: 138.79 | Current reward: 100.00 | Status: Reached the goal
+
+Episode 5500 | Avg reward (last 100): 152.24
+
 reached
 Saved GIF: results/videos/LunarLander_0.gif
 Test Episode 1: total reward = 209.14110268153448
+
 reached
 Saved GIF: results/videos/LunarLander_1.gif
 Test Episode 2: total reward = 253.14918661507846
+
 reached
 Saved GIF: results/videos/LunarLander_2.gif
 Test Episode 3: total reward = 205.78820721239532
+
 reached
 Saved GIF: results/videos/LunarLander_3.gif
 Test Episode 4: total reward = 195.28689352775007
+
 reached
 Saved GIF: results/videos/LunarLander_4.gif
 Test Episode 5: total reward = 208.77817685209357
