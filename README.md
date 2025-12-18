@@ -684,17 +684,16 @@ After training, the policy is evaluated in render mode:
 - Each episode is saved as a **GIF**
 - Videos are stored in:
 
-![LunarLander_2](https://github.com/user-attachments/assets/0b30b035-36e7-42fa-ab21-bcc7da686f7f)
 
 <div style="display: flex; gap: 10px;">
   <img src="![LunarLander_0](https://github.com/user-attachments/assets/aed85487-43bb-48d2-9227-f05df91c5856)" width="230"/>
-  <img src="https://github.com/user-attachments/assets/LunarLander_1.gif" width="230"/>
-  <img src="https://github.com/user-attachments/assets/LunarLander_2.gif" width="230"/>
+  <img src="![LunarLander_1](https://github.com/user-attachments/assets/4c4d2f2d-c54e-48d2-b713-ffea083215be)" width="230"/>
+  <img src="![LunarLander_2](https://github.com/user-attachments/assets/36f50ab3-3828-48e8-a801-fe657e81d81e)" width="230"/>
 </div>
 
 <div style="display: flex; gap: 10px; margin-top: 10px;">
-  <img src="https://github.com/user-attachments/assets/LunarLander_3.gif" width="230"/>
-  <img src="https://github.com/user-attachments/assets/LunarLander_4.gif" width="230"/>
+  <img src="![LunarLander_3](https://github.com/user-attachments/assets/629ea985-9b6f-49f8-8a81-f34fed64f1bb)" width="230"/>
+  <img src="![LunarLander_4](https://github.com/user-attachments/assets/725a4050-8fec-413d-a795-b2ea72325ce6)" width="230"/>
 </div>
 
 
