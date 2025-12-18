@@ -569,20 +569,15 @@ Generalized Advantage Estimation (GAE) is used.
 
 Temporal Difference (TD) Error
 
-delta_t = r_t + γ * V(s_{t+1}) - V(s_t)
+<img width="1324" height="188" alt="image" src="https://github.com/user-attachments/assets/a5468442-c6e8-474f-b91c-e6860b2729a9" />
 
-Where:
-- r_t        : reward at time step t
-- V(s_t)     : value estimate of current state
-- V(s_{t+1}) : value estimate of next state
 
 --------------------------------------------------
 
 Advantage Function
 
-A_t = sum_{l=0 to ∞} (γ * λ)^l * delta_{t+l}
-
-At​=l=0∑∞​(γλ)lδt+l​
+<img width="1370" height="344" alt="image" src="https://github.com/user-attachments/assets/5e1df6ae-82fe-4c5f-bd1b-f4f85577a72c" />
+​
 
 This formulation combines multiple-step TD errors to obtain
 a low-variance and low-bias advantage estimate.
@@ -592,6 +587,7 @@ a low-variance and low-bias advantage estimate.
 Hyperparameters
 
 γ (gamma)   = 0.99   # discount factor
+
 λ (lambda)  = 0.96   # GAE smoothing parameter
 
 --------------------------------------------------
