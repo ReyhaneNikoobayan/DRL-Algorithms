@@ -481,6 +481,8 @@ Below are example GIFs produced during evaluation:
 
 ![cartpole_episode_2](https://github.com/user-attachments/assets/9401ed3f-882c-476d-a4fb-4221466c75b8)
 
+---
+
 ## Generalized Advantage Estimation (GAE)
 
 Generalized Advantage Estimation (GAE) is a technique used in actor-critic reinforcement learning algorithms to reduce the high variance commonly found in basic policy gradient methods such as REINFORCE. In the Advantage Actor-Critic (A2C) framework, policy updates rely on the advantage function, defined as the difference between the action-value function and the state-value function. The challenge lies in estimating this advantage accurately while maintaining a balance between bias and variance.
