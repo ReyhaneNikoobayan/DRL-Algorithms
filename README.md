@@ -560,23 +560,40 @@ This encourages **exploration during training**.
 
 ---
 
-### 4️⃣ Generalized Advantage Estimation (GAE)
+## 4️⃣ Generalized Advantage Estimation (GAE)
 
-To stabilize training and reduce variance, **GAE** is used.
+To stabilize training and reduce variance in policy gradient updates,
+Generalized Advantage Estimation (GAE) is used.
 
-**Temporal Difference Error:**
-\[
-\delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)
-\]
+--------------------------------------------------
 
-**Advantage Function:**
-\[
-A_t = \sum_{l=0}^{\infty} (\gamma \lambda)^l \delta_{t+l}
-\]
+Temporal Difference (TD) Error
+
+delta_t = r_t + γ * V(s_{t+1}) - V(s_t)
 
 Where:
-- \( \gamma = 0.99 \) (discount factor)
-- \( \lambda = 0.96 \) (GAE smoothing parameter)
+- r_t        : reward at time step t
+- V(s_t)     : value estimate of current state
+- V(s_{t+1}) : value estimate of next state
+
+--------------------------------------------------
+
+Advantage Function
+
+A_t = sum_{l=0 to ∞} (γ * λ)^l * delta_{t+l}
+
+This formulation combines multiple-step TD errors to obtain
+a low-variance and low-bias advantage estimate.
+
+--------------------------------------------------
+
+Hyperparameters
+
+γ (gamma)   = 0.99   # discount factor
+λ (lambda)  = 0.96   # GAE smoothing parameter
+
+--------------------------------------------------
+
 
 ---
 ## 🧮 Loss Functions
