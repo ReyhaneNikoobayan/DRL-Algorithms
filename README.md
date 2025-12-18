@@ -483,7 +483,7 @@ Below are example GIFs produced during evaluation:
 
 ---
 
-## Generalized Advantage Estimation (GAE)
+# Generalized Advantage Estimation (GAE)
 
 Generalized Advantage Estimation (GAE) is a technique used in actor-critic reinforcement learning algorithms to reduce the high variance commonly found in basic policy gradient methods such as REINFORCE. In the Advantage Actor-Critic (A2C) framework, policy updates rely on the advantage function, defined as the difference between the action-value function and the state-value function. The challenge lies in estimating this advantage accurately while maintaining a balance between bias and variance.
 
@@ -491,6 +491,167 @@ GAE addresses this challenge by computing the advantage as an exponentially weig
 
 In practice, GAE is efficiently computed using a backward recursive formulation over a trajectory, making it suitable for large-scale training. It is widely used in modern policy optimization algorithms such as PPO and TRPO, where it significantly improves training stability, sample efficiency, and convergence speed.
 
+# 🧠 Actor–Critic with GAE for LunarLander-v3 
+
+This repository contains my **third Deep Reinforcement Learning (DRL) implementation**, where I implement an **Actor–Critic algorithm enhanced with Generalized Advantage Estimation (GAE)** from scratch using **PyTorch**.
+
+The agent is trained on the **LunarLander-v3** environment with a discrete action space using **on-policy learning**.
+
+---
+
+## 📌 Project Overview
+
+- **Algorithm:** Actor–Critic (A2C-style) with GAE  
+- **Framework:** PyTorch  
+- **Environment:** LunarLander-v3 (Gymnasium)  
+- **Action Space:** Discrete  
+- **Training Type:** On-policy  
+- **Visualization:** GIF rendering of trained policy  
+
+The objective is to learn a policy that safely lands the spacecraft between the flags while minimizing fuel consumption and avoiding crashes.
+
+---
+
+## 🧠 Algorithm Explanation
+
+### 1️⃣ Actor–Critic Framework
+
+The Actor–Critic method combines:
+- **Policy-based learning** (Actor)
+- **Value-based learning** (Critic)
+
+Both networks are trained simultaneously.
+
+#### Actor (Policy Network)
+- Outputs a probability distribution over actions
+- Uses a softmax layer for discrete action selection
+- Actions are sampled from a categorical distribution
+
+#### Critic (Value Network)
+- Estimates the state value function \( V(s) \)
+- Used to reduce variance in policy gradient updates
+
+---
+
+### 2️⃣ Neural Network Architecture
+
+Two separate streams share the same input state:
+
+State
+├── Actor Network → Softmax → Action probabilities
+└── Critic Network → Value estimate
+
+
+- Fully connected layers
+- ReLU activation
+- Separate output heads for policy and value
+
+---
+
+### 3️⃣ Action Selection
+
+At each timestep:
+1. The policy outputs action probabilities
+2. A categorical distribution is created
+3. An action is sampled
+4. Log-probabilities and entropy are stored for learning
+
+This encourages **exploration during training**.
+
+---
+
+### 4️⃣ Generalized Advantage Estimation (GAE)
+
+To stabilize training and reduce variance, **GAE** is used.
+
+**Temporal Difference Error:**
+\[
+\delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)
+\]
+
+**Advantage Function:**
+\[
+A_t = \sum_{l=0}^{\infty} (\gamma \lambda)^l \delta_{t+l}
+\]
+
+Where:
+- \( \gamma = 0.99 \) (discount factor)
+- \( \lambda = 0.96 \) (GAE smoothing parameter)
+
+---
+
+### 5️⃣ Loss Function
+
+The total loss is composed of:
+
+#### Policy Loss (Actor)
+Encourages actions with positive advantage:
+\[
+L_{policy} = -\mathbb{E}[\log \pi(a|s) \cdot A]
+\]
+
+#### Value Loss (Critic)
+Mean squared error between predicted value and return:
+\[
+L_{value} = \frac{1}{2}(R - V(s))^2
+\]
+
+#### Entropy Bonus
+Encourages exploration:
+\[
+L_{entropy} = -\beta H(\pi)
+\]
+
+#### Final Loss
+\[
+L = L_{policy} + L_{value} + L_{entropy}
+\]
+
+---
+
+## ⚙️ Training Configuration
+
+| Parameter | Value |
+|----------|-------|
+| Episodes | 5500 |
+| Learning Rate | 1e-3 |
+| Hidden Units | 256 |
+| Discount Factor (γ) | 0.99 |
+| GAE Lambda (λ) | 0.96 |
+| Entropy Coefficient | 0.01 |
+| Optimizer | Adam |
+
+Model updates are performed **on-policy** after each episode.
+
+---
+
+## 📊 Results
+
+### Training Performance
+- The agent successfully learns to land the spacecraft
+- Average reward steadily increases over training
+- Crash frequency decreases significantly
+- Stable landings achieved consistently after convergence
+
+**Typical learning behavior:**
+- Early training: frequent crashes, unstable descent
+- Mid training: partial control, occasional success
+- Late training: smooth descent and successful landing
+
+The average reward over the last 100 episodes is printed during training to monitor convergence.
+
+---
+
+### 🎥 Policy Evaluation
+
+After training, the policy is evaluated in render mode:
+
+- Multiple test episodes are executed
+- Each episode is saved as a **GIF**
+- Videos are stored in:
+
+```text
+![LunarLander_2](https://github.com/user-attachments/assets/0b30b035-36e7-42fa-ab21-bcc7da686f7f)
 
 
 
