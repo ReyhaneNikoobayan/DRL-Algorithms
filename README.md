@@ -684,17 +684,20 @@ After training, the policy is evaluated in render mode:
 - Each episode is saved as a **GIF**
 - Videos are stored in:
 
+![LunarLander_0](https://github.com/user-attachments/assets/7ec8be61-2d8b-4515-b49d-2d35126b0b8d)
 
-<div style="display: flex; gap: 10px;">
-  <img src="(https://github.com/user-attachments/assets/aed85487-43bb-48d2-9227-f05df91c5856)" width="230"/>
-  <img src="(https://github.com/user-attachments/assets/4c4d2f2d-c54e-48d2-b713-ffea083215be)" width="230"/>
-  <img src="(https://github.com/user-attachments/assets/36f50ab3-3828-48e8-a801-fe657e81d81e)" width="230"/>
-</div>
 
-<div style="display: flex; gap: 10px; margin-top: 10px;">
-  <img src="(https://github.com/user-attachments/assets/629ea985-9b6f-49f8-8a81-f34fed64f1bb)" width="230"/>
-  <img src="(https://github.com/user-attachments/assets/725a4050-8fec-413d-a795-b2ea72325ce6)" width="230"/>
-</div>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/230eb936-e7d6-4076-b768-d3739bf65089" width="200">
+  <img src="https://github.com/user-attachments/assets/1922717e-2c1e-4ca9-8429-38c46491c4c7" width="200">
+  <img src="gif3.gif" width="200">
+</p>
+
+<p align="center">
+  <img src="gif4.gif" width="200">
+  <img src="gif5.gif" width="200">
+</p>
+
 
 
 --- 
