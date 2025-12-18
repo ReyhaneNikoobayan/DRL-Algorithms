@@ -686,14 +686,14 @@ After training, the policy is evaluated in render mode:
 
 
 <div style="display: flex; gap: 10px;">
-  <img src="(https://github.com/user-attachments/assets/aed85487-43bb-48d2-9227-f05df91c5856)" width="230"  alt="LunarLander_0"/>
-  <img src="(https://github.com/user-attachments/assets/4c4d2f2d-c54e-48d2-b713-ffea083215be)" width="230"  alt="LunarLander_1"/>
-  <img src="(https://github.com/user-attachments/assets/36f50ab3-3828-48e8-a801-fe657e81d81e)" width="230"  alt="LunarLander_2"/>
+  <img src="(https://github.com/user-attachments/assets/aed85487-43bb-48d2-9227-f05df91c5856)" width="230"/>
+  <img src="(https://github.com/user-attachments/assets/4c4d2f2d-c54e-48d2-b713-ffea083215be)" width="230"/>
+  <img src="(https://github.com/user-attachments/assets/36f50ab3-3828-48e8-a801-fe657e81d81e)" width="230"/>
 </div>
 
 <div style="display: flex; gap: 10px; margin-top: 10px;">
-  <img src="(https://github.com/user-attachments/assets/629ea985-9b6f-49f8-8a81-f34fed64f1bb)" width="230" alt="LunarLander_3"/>
-  <img src="(https://github.com/user-attachments/assets/725a4050-8fec-413d-a795-b2ea72325ce6)" width="230" alt="LunarLander_4"/>
+  <img src="(https://github.com/user-attachments/assets/629ea985-9b6f-49f8-8a81-f34fed64f1bb)" width="230"/>
+  <img src="(https://github.com/user-attachments/assets/725a4050-8fec-413d-a795-b2ea72325ce6)" width="230"/>
 </div>
 
 
