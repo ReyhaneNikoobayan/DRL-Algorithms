@@ -579,33 +579,52 @@ Where:
 - \( \lambda = 0.96 \) (GAE smoothing parameter)
 
 ---
+## 🧮 Loss Functions
 
-### 5️⃣ Loss Function
+The total loss used to train the Actor–Critic model consists of three components:
 
-The total loss is composed of:
+--------------------------------------------------
 
-#### Policy Loss (Actor)
-Encourages actions with positive advantage:
-\[
-L_{policy} = -\mathbb{E}[\log \pi(a|s) \cdot A]
-\]
+Policy Loss (Actor)
+Encourages actions with positive advantage
 
-#### Value Loss (Critic)
-Mean squared error between predicted value and return:
-\[
-L_{value} = \frac{1}{2}(R - V(s))^2
-\]
+L_policy = - E[ log π(a | s) * A ]
 
-#### Entropy Bonus
-Encourages exploration:
-\[
-L_{entropy} = -\beta H(\pi)
-\]
+Where:
+- π(a | s) : policy (actor network)
+- A        : advantage estimate (GAE)
 
-#### Final Loss
-\[
-L = L_{policy} + L_{value} + L_{entropy}
-\]
+--------------------------------------------------
+
+Value Loss (Critic)
+Minimizes the error between predicted state value and return
+
+L_value = 0.5 * (R - V(s))^2
+
+Where:
+- R    : estimated return
+- V(s) : value predicted by the critic
+
+--------------------------------------------------
+
+Entropy Bonus
+Encourages exploration and prevents premature convergence
+
+L_entropy = - β * H(π)
+
+Where:
+- H(π) : entropy of the policy distribution
+- β    : entropy coefficient
+
+--------------------------------------------------
+
+Final Loss
+Combined objective optimized during training
+
+L = L_policy + L_value + L_entropy
+
+--------------------------------------------------
+
 
 ---
 
